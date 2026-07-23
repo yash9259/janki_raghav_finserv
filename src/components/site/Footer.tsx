@@ -1,5 +1,5 @@
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/janaki-raghav-logo.png.asset.json";
+
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 pb-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5">
-              <img src={logo.url} alt="Janaki Raghav Finserve" className="h-11 w-11 object-contain" />
+              <img src= "/logo.png" alt="Janaki Raghav Finserve" className="h-11 w-11 object-contain" />
               <div className="font-bold text-lg leading-tight">Janaki Raghav<span className="text-brand-gold">.</span>
                 <div className="text-[10px] uppercase tracking-[0.18em] text-white/50 font-normal">Finserve</div>
               </div>
