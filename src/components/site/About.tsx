@@ -49,7 +49,7 @@ export default function About() {
               Six years of <span className="text-gradient-gold">trusted</span> financial advisory.
             </h2>
             <p className="mt-5 text-brand-dark/70 leading-relaxed">
-              Since 2020, Janaki Raghav has helped 460+ families and businesses unlock the right financial products
+              Since 2020, Janaki Raghav Finserve  has helped 460+ families and businesses unlock the right financial products
               at the right rates. We are a SEBI-aware, RBI-registered DSA partnered with India's leading public &
               private sector banks, NBFCs and insurance companies.
             </p>
