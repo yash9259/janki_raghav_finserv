@@ -52,7 +52,7 @@ export default function Navbar() {
 
           <div className="hidden xl:flex items-center gap-3">
             <Link to="/track" className="text-sm font-medium text-brand-dark/70 hover:text-brand-dark">Track Loan</Link>
-            <Link to="/admin" className="text-sm font-medium text-brand-dark/70 hover:text-brand-dark">Admin</Link>
+
             <a
               href="#contact"
               className="group relative inline-flex items-center gap-2 rounded-full bg-brand-dark px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark/90 transition-all hover:shadow-lg"
