@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/janaki-raghav-logo.png.asset.json";
+import logo from "@/components/site/logo.png";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="w-full px-4 sm:px-8">
         <div className="flex items-center justify-between py-2">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <img src={logo.url} alt="Janaki Raghav Finserve" className="h-11 w-11 object-contain drop-shadow-md" />
+            <img src={logo} alt="Janaki Raghav Finserve" className="h-11 w-11 object-contain drop-shadow-md" />
             <div className="leading-tight">
               <div className="font-bold text-brand-dark tracking-tight text-base sm:text-lg">Janaki Raghav<span className="text-brand-gold">.</span></div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Finserve</div>
