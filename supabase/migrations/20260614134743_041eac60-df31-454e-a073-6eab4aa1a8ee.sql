@@ -1,0 +1,9 @@
+
+ALTER TABLE public.leads
+  ADD COLUMN IF NOT EXISTS query_note TEXT,
+  ADD COLUMN IF NOT EXISTS rejection_reason TEXT,
+  ADD COLUMN IF NOT EXISTS loan_amount NUMERIC,
+  ADD COLUMN IF NOT EXISTS interest_rate NUMERIC,
+  ADD COLUMN IF NOT EXISTS tenure_years NUMERIC;
+
+ALTER TABLE public.leads ALTER COLUMN stage SET DEFAULT 'New';
