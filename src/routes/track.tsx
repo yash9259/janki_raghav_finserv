@@ -7,7 +7,7 @@ import {
   FileText, ShieldCheck, LogIn, MessageSquare, BadgeCheck, Banknote, Wallet, XCircle,
 } from "lucide-react";
 import { trackByPan, type TrackedLead } from "@/lib/track.functions";
-import logo from "@/assets/janaki-raghav-logo.png.asset.json";
+import logo from "@/components/site/logo.png";
 
 export const Route = createFileRoute("/track")({
   component: TrackPage,
@@ -71,7 +71,7 @@ function TrackPage() {
       <header className="border-b border-brand-dark/5 bg-white/80 backdrop-blur sticky top-0 z-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo.url} alt="Janaki Raghav Finserve" className="h-10 w-10 object-contain" />
+            <img src={logo} alt="Janaki Raghav Finserve" className="h-10 w-10 object-contain" />
             <div className="leading-tight">
               <div className="font-bold text-brand-dark text-base">Janaki Raghav<span className="text-brand-gold">.</span></div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Finserve</div>
