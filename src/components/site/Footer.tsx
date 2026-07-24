@@ -37,9 +37,9 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/45">
           <div>© {new Date().getFullYear()} Janaki Raghav Finserve · Bhuj, Kachchh, Gujarat</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Sitemap</a>
+            <a href="#contact" className="hover:text-white">Privacy</a>
+            <a href="#contact" className="hover:text-white">Terms</a>
+            <a href="#contact" className="hover:text-white">Sitemap</a>
           </div>
         </div>
       </div>
@@ -48,11 +48,26 @@ export default function Footer() {
 }
 
 function FCol({ title, links }: { title: string; links: string[] }) {
+  const hrefFor = (label: string) => {
+    const key = label.toLowerCase();
+    if (key.includes("about")) return "#about";
+    if (key.includes("brochure")) return "#brochures";
+    if (key.includes("emi") || key.includes("calculator")) return "#calculator";
+    if (key.includes("careers")) return "#contact";
+    if (key.includes("privacy") || key.includes("term") || key.includes("sitemap")) return "#contact";
+    // Loans & insurance -> services section
+    return "#services";
+  };
+
   return (
     <div>
       <h4 className="text-sm font-bold uppercase tracking-wider mb-4 text-brand-gold">{title}</h4>
       <ul className="space-y-2.5">
-        {links.map(l => <li key={l}><a href="#" className="text-sm text-white/60 hover:text-white transition-colors">{l}</a></li>)}
+        {links.map(l => (
+          <li key={l}>
+            <a href={hrefFor(l)} className="text-sm text-white/60 hover:text-white transition-colors">{l}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );
